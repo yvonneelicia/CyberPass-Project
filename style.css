@@ -1,0 +1,220 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Verdana', sans-serif
+}
+
+header{
+  width: 100%; /* width is 100% of screen */
+  display: flex; 
+  justify-content: space-between; 
+  padding: 30px 40px;
+}
+
+#menu li{
+  list-style: none;
+  display: inline-block;
+  margin: 5px;
+}
+
+#menu li a{
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* body styling */
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150vh;
+  background: white;
+}
+.heading-one{
+  min-height: 30;
+  padding-left: 20px;
+}
+
+/* navigation styling */
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #7267cb;
+}
+.logo{
+	color: white;
+	font-size: 40px;
+	font-weight: 800;
+	letter-spacing: 3px;
+}
+#menu{
+	display: flex;
+}
+#menu li a{
+	color: white;
+	font-size: 17px;
+	font-weight: 800;
+	margin: 0 25px;
+	transition: all .45s ease;
+}
+#menu a:hover{
+	color: black;
+}
+#menu a.active{
+	color: white;
+}
+
+
+/* main is the password generator app section*/
+.main{
+  width: 650px;
+  height: 500px;
+  background: #8b51ff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(17, 17, 17, 0.05);
+  position: relative;
+}
+.main h2{
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1.2rem 1.8rem;
+  color: white;
+}
+
+.box-padding{
+  margin: 1.3rem 1.8rem;
+}
+.box-padding .pass-box{
+  position: relative;
+}
+.pass-box input{
+  width: 100%;
+  height: 55px;
+  border-radius: 0px;
+  border: 1px solid #aaa;
+  padding: 0 3rem 0 1rem;
+  font-weight: 500;
+  font-size: 1rem;
+  color: black;
+  letter-spacing: 3px;
+  background-color: white;
+}
+.pass-box span{
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  line-height: 55px;
+  color: #111111;
+}
+.pass-box span:hover{
+  color: #8a2793!important; /* icon changes color when pointer is hovered */
+}
+
+.title{
+  font-weight: bold;
+  font-size: 15px;
+}
+.box-padding .pass-indicator{
+  width: 100%;
+  height: 4px;
+  position: relative;
+  background: #dfdfdf;
+  margin-top: 0.75rem;
+  border-radius: 25px;
+}
+.pass-indicator::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  transition: width 0.3s ease;
+}
+.pass-indicator#weak::before{
+  width: 20%;
+  background: red;
+}
+.pass-indicator#medium::before{
+  width: 50%;
+  background: rgb(227, 190, 57);
+}
+.pass-indicator#strong::before{
+  width: 100%;
+  background: green;
+}
+.box-padding .pass-length{
+  margin: 1.6rem 0 1.3rem;
+}
+.pass-length .details{
+  display: flex;
+  justify-content: space-between;
+}
+.pass-length input{
+  width: 100%;
+  height: 10px;
+}
+.pass-settings .opts{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+}
+.pass-settings .opts .opt{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+
+.opts .opt:first-child{
+  pointer-events: none;
+}
+.opts .opt:first-child input{
+  opacity: 0.9;
+}
+.opts .opt input{
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+.opts .opt label{
+  cursor: pointer;
+  color: #333232;
+  padding-left: 0.65rem;
+}
+.box-padding .generate-button{
+  width: 100%;
+  color: black;
+  outline:#111111;
+  cursor: pointer;
+  background: #f1f1f1;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  border-radius: 50px;
+  margin: 1.5em 0 1.5rem;
+  box-shadow: 8px 8px 3px rgba(19, 19, 19, 0.5);
+  transition: all 0.3s;
+}
+
+.generate-button:hover{
+  cursor: pointer;
+  color: #8a2793; /* When pointer is hovered, color changes from black to purple hue. */
+}
+.generate.button:active{
+  transition: all 0.3; /*  transition effect of 0.3 seconds applied on generate password text when pointer is hovered over text. Color changes from black to purple hue. */
+}
+
+.heading-one{
+  padding-left: 30px;
+}
+

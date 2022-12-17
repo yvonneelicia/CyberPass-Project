@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!-- this specifies the document type which is HTML -->  
+<html lang="en"> <!-- this is used to identify the language of text content on the web -->  
+  <head>
+    <meta charset="utf-8">  <!--specifies the character encoding for the HTML document-->
+    <title>CyberPass Password Generator</title>
+    <link rel="stylesheet" href="style.css"> <!-- links css file to be loaded to HTML page -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- controls the size of the viewport-->
+    <!-- Google icon link for icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="script.js" defer></script> <!--The src attribute specifies the URL of an external script file. The defer is a boolean attribute and only used for external scripts. It specifies that the script is downloaded in parallel to parsing the page, and executed after the page has finished parsing.-->
+  </head>
+   <!--body-->
+   <body>
+
+     <!----navigation--->
+      <header>  <!---represents a container for introductory content or a set of navigational links --->
+        <a href="index.html" class="logo">CyberPass</a> <!---- the href attribute indicates the destination of the hyperlink--->
+        <ul id="menu"> <!---The id attribute defines an identifier which must be unique in the whole document -->
+          <li><a title="Home" href="index.html">Home</a></li> <!---- the href attribute indicates the destination of the hyperlink--->
+          <li><a title="Learn More" href="about.html">Learn More</a></li> <!---- the href attribute indicates the destination of the hyperlink--->
+        </ul>
+      </header>
+
+  <!---- password generator section --->
+  <section> <!-- this tag defines a section in a document-->
+    <div class="main"> <!-- main container, which is the password generator box -->
+      <h2> CyberPass Password Generator</h2>
+      <div class="box-padding"> <!--- a class attribute specifies one or more class names for an element · Classes are used by CSS and JavaScript to select and access specific elements --->
+        <div class="pass-box"> <!--- a class attribute specifies one or more class names for an element -->
+          <input type="text" disabled> <!-- The disabled attribute is a boolean attribute. When present, it specifies that the <input> element should be disabled. This means that users are unable to type anything in the input box -->
+          <span class="material-symbols-rounded">copy_all</span> <!-- imported icon from Google icon links. The span attribute is used to wrap sections of text for styling purposes. In this case, it's the copy icon-->
+        </div>
+        <div class="pass-indicator"></div> <!-- The div attribute defines a division in an HTML document. This division is for the strength indicator, and the class attribute is used by CSS for styling and JavaScript to select and access specific elements -->
+        <div class="pass-length"> <!-- class atrribute is used to point to a class in a cascading style sheet -->
+          <div class="details"> <!-- class atrribute is used to point to a class in a cascading style sheet -->
+            <label class="title">Password Length</label> <!-- label tag is used to create labels for items in a user interface. This tag shows 'Password Length' showing the user to select a desired password length-->
+            <span></span>
+          </div>
+          <input type="range" min="8" max="30" value="15" step="1">  <!-- these tags defines the mininimum input and maximum input values, and 15 being the default value shown.-->
+        </div>
+        <div class="pass-settings"> <!--- a class attribute specifies one or more class names for an element -->
+          <label class="title">Password Settings</label> <!-- label tag is used to create labels for items in a user interface.-->
+          <ul class="opts"> <!-- class labelled as opts for password options section -->
+            <li class="opt">  <!--- a class attribute specifies one or more class names for an element -->
+              <input type="checkbox" id="lowercase" checked> <!-- checkbox for lowercase password characteristic, already checked by default, however user can uncheck this if they don't want lowercase characteristics--> 
+              <label for="lowercase"> Include Lowercase (a-z)</label> 
+            </li>
+            <li class="opt"> <!--- a class attribute specifies one or more class names for an element -->
+              <input type="checkbox" id="uppercase"> <!-- checkbox for uppercase -->
+              <label for="uppercase"> Include Uppercase (A-Z)</label> <!-- labels represents a caption for an item in a user interface -->
+            </li>
+          </li>
+          <li class="opt"> <!--- a class attribute specifies one or more class names for an element -->
+            <input type="checkbox" id="symbols"> <!-- checkbox for symbols -->
+            <label for="symbols"> Include Symbols (!-$^+)</label> <!-- labels defines a heading for an item in a user interface -->
+          </li>
+            <li class="opt"> <!--- a class attribute specifies one or more class names for an element -->
+              <input type="checkbox" id="numbers">  <!-- checkbox for digits -->
+              <label for="numbers"> Include Numbers (0-9)</label> <!-- labels defines a hrading for an item in a user interface -->
+            <li class="opt"> <!--- a class attribute specifies one or more class names for an element -->
+              <input type="checkbox" id="exc-duplicate"> <!-- checkbox for excluding duplicates -->
+              <label for="exc-duplicate">Exclude Duplicate</label> <!-- labels defines a heading for an item in a user interface -->
+            </li>
+            <li class="opt"> <!--- a class attribute specifies one or more class names for an element -->
+              <input type="checkbox" id="inc-spaces"> <!-- checkbox for including spaces -->
+              <label for="spaces">Include Spaces</label> <!-- labels defines a heading for an item in a user interface -->
+            </li>
+          </ul>
+        </div>
+        <button class="generate-button">GENERATE PASSWORD</button> <!-- The button tag is an element activated by the user to carry out a function. This is case, once the user clicks the button, JavaScript code is activated and a generated password is outputted--> 
+      </div>
+    </div>
+  </section>
+</body>
+</html>
